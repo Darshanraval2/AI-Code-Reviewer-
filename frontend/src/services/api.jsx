@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3002']; // Backend server URLs
 
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: API_BASE_URL[0], // You can implement load balancing if needed
   headers: {
     'Content-Type': 'application/json',
   },
