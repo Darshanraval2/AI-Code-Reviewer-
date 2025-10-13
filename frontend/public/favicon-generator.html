@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+</head>
+<body>
+    <canvas id="canvas" width="32" height="32" style="border: 1px solid #ccc;"></canvas>
+    <br>
+    <a id="download" download="favicon.ico">Download ICO</a>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Draw background
+        ctx.fillStyle = '#667eea';
+        ctx.fillRect(0, 0, 32, 32);
+        
+        // Draw robot emoji (simplified)
+        ctx.fillStyle = 'white';
+        ctx.font = '20px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText('🤖', 16, 22);
+        
+        // Convert to ICO
+        const download = document.getElementById('download');
+        download.href = canvas.toDataURL('image/png');
+    </script>
+</body>
+</html>

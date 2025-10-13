@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Robot Favicon</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .favicon-preview { display: inline-block; margin: 10px; }
+        canvas { border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>🤖 AI Code Reviewer Favicon</h1>
+    
+    <div class="favicon-preview">
+        <h3>32x32 Favicon</h3>
+        <canvas id="favicon32" width="32" height="32"></canvas>
+        <br>
+        <a id="download32" download="favicon.ico">Download 32x32 ICO</a>
+    </div>
+    
+    <div class="favicon-preview">
+        <h3>16x16 Favicon</h3>
+        <canvas id="favicon16" width="16" height="16"></canvas>
+        <br>
+        <a id="download16" download="favicon-16.ico">Download 16x16 ICO</a>
+    </div>
+
+    <script>
+        // Create 32x32 favicon
+        const canvas32 = document.getElementById('favicon32');
+        const ctx32 = canvas32.getContext('2d');
+        
+        // Background gradient
+        const gradient32 = ctx32.createLinearGradient(0, 0, 32, 32);
+        gradient32.addColorStop(0, '#667eea');
+        gradient32.addColorStop(1, '#764ba2');
+        
+        ctx32.fillStyle = gradient32;
+        ctx32.fillRect(0, 0, 32, 32);
+        
+        // Robot emoji
+        ctx32.fillStyle = 'white';
+        ctx32.font = 'bold 20px Arial';
+        ctx32.textAlign = 'center';
+        ctx32.textBaseline = 'middle';
+        ctx32.fillText('🤖', 16, 16);
+        
+        // Create 16x16 favicon
+        const canvas16 = document.getElementById('favicon16');
+        const ctx16 = canvas16.getContext('2d');
+        
+        // Background gradient
+        const gradient16 = ctx16.createLinearGradient(0, 0, 16, 16);
+        gradient16.addColorStop(0, '#667eea');
+        gradient16.addColorStop(1, '#764ba2');
+        
+        ctx16.fillStyle = gradient16;
+        ctx16.fillRect(0, 0, 16, 16);
+        
+        // Robot emoji (smaller)
+        ctx16.fillStyle = 'white';
+        ctx16.font = 'bold 12px Arial';
+        ctx16.textAlign = 'center';
+        ctx16.textBaseline = 'middle';
+        ctx16.fillText('🤖', 8, 8);
+        
+        // Set download links
+        document.getElementById('download32').href = canvas32.toDataURL('image/png');
+        document.getElementById('download16').href = canvas16.toDataURL('image/png');
+    </script>
+</body>
+</html>
