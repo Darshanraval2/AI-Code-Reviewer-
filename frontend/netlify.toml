@@ -1,7 +1,7 @@
 [build]
   base = "frontend"
   command = "npm install && npm run build"
-  publish = "frontend/dist"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "18"
@@ -12,6 +12,6 @@
   status = 200
 
 [dev]
-  command = "cd frontend && npm run dev"
+  command = "npm run dev"
   port = 3001
-  publish = "frontend/dist"
+  publish = "dist"
