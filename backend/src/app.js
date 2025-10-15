@@ -5,7 +5,7 @@ const app = express();
 
 // Enable CORS for frontend communication
 app.use(cors({
-  origin: ['http://localhost:3001', 'http://localhost:3002'], // React dev server ports
+  origin: ['http://localhost:3001', 'http://localhost:3002','https://aicodereviewer1.netlify.app'], // React dev server ports
   credentials: true
 }));
 
