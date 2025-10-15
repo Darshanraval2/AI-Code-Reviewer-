@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = ['http://localhost:3000', 'https://ai-code-reviewer-kxp2.onrender.com']; // Backend server URLs
+const API_BASE_URL = ['https://ai-code-reviewer-kxp2.onrender.com']; // Backend server URLs
 
 const api = axios.create({
   baseURL: API_BASE_URL[0], // You can implement load balancing if needed
